@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Escena } from "./components/escena/Escena";
+import { Botones } from "./components/escena/Botones";
+import { frases } from "./data/frases";
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Botones text="Anterior"/>
+      <Botones text="Siguiente"/>
+      <Escena f = {frases}/>
     </div>
   );
 }
