@@ -1,15 +1,23 @@
 import { Escena } from "./components/escena/Escena";
 import { Botones } from "./components/escena/Botones";
 import { frases } from "./data/frases";
+/* import React, {useState, useEffect} from "react"; */
 
 
 
-const App = () => {
+
+const App = () => { 
+
+
   return (
-    <div>
+    <div>   
       <Botones text="Anterior"/>
-      <Botones text="Siguiente"/>
-      <Escena f = {frases}/>
+      <Botones text="Siguiente"/>    
+     
+      <Escena
+       f = {frases}/>
+    
+      
     </div>
   );
 }
