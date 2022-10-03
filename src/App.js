@@ -16,7 +16,7 @@ const App = () => {
   console.log('----', useState)
 
   const handleButton = (e, textoBoton) => {
-    console.log('+++++++', e)
+    e.preventDefault()
 // aqui solo hacemos if para saber cuando estamos al principio o al final
     if (textoBoton === 'Siguiente' && numFrase >= 3) { 
       return alert('Estas en la última')
