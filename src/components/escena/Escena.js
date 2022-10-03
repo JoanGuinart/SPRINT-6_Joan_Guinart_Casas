@@ -1,15 +1,19 @@
-import {BordeFrase} from "../../styled";
-
+import './escena.css';
+import { BordeFrase } from '../../styled';
 export const Escena = (props) => {
+    
+    const num = props.num
+    const frases = (props.f).map((frase, index) => 
+        <p key={index} className={`${index === num ? "selected": ""}`}>
+            {frase}
+        </p>
+    )
 
-  const frases = (props.f).map(frase => 
-
-    <div key={frase}>
-      <BordeFrase>{frase}</BordeFrase>
-    </div>
-
-  );
-
-  //{frases}
-  return <div>{frases}</div>;
-};
+    return (
+        
+           <BordeFrase>
+              {frases}
+           </BordeFrase>
+        
+    );
+}

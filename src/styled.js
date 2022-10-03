@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
     //ESTILOS
-export const BordeFrase = styled.p`
-        border: 1px solid #000;
-        border-radius: 10px;
+export const BordeFrase = styled.div`
         text-align: center;
         height: 1.5rem;
         align-items: center;
