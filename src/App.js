@@ -5,8 +5,9 @@ import { frases } from "./data/frases";
 import { Welcome } from "./components/escena/welcome";
 
 const App = () => {
-  const [numFrase, setNumFrase] = useState(0);
 
+  const [numFrase, setNumFrase] = useState(0);
+ 
   /* al asignar useState a (0) ya le decimos de primeras que el valor state: numFrase se iguale por ahora a 0 y arranque desde ahí */
 
   console.log("numero de frase:", numFrase);
@@ -37,15 +38,16 @@ const App = () => {
     }
   };
 
-  const [isWelcome, setIsWelcome] = useState(false);
+// Exercici 5 Nivell 2
+  const [WelcomePage, setWelcomePage] = useState(false);
 
-  const enter = () => setIsWelcome(true);
+  const Start = () => setWelcomePage(true);
 
   return (
     <>
-      {isWelcome === false && <Welcome onClick={enter} />}
-      {isWelcome === true && (
-        <StyledBackground background={frases}>
+      {WelcomePage === false && <Welcome onClick={Start} />}
+      {WelcomePage === true && (
+        <StyledBackground background={frases[numFrase].img}>
           <Boton type="button" onClick={(e) => handleButton(e, "Anterior")}>
             Anterior
           </Boton>
@@ -59,9 +61,9 @@ const App = () => {
 
     /* asi se haria escena si no tuvieramos escena en un componente separado:
  
-    frases.map((element(frase), index) =>
+    frases.map(("""element"""(frase), index) =>
     <p key={index} className = {'${index === numFrase ? "selected": ""}'})>
-    {element(frase)}
+    {"""element"""(frase.txt)}
     </p>
     return(
         <BordeFrase>

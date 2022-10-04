@@ -5,7 +5,7 @@ export const BordeFrase = styled.div`
   text-align: center;
   height: 1.5rem;
   align-items: center;
-  color: #ffce77;
+  color: #FFF5D6 ;
 `;
 
 export const Boton = styled.button`

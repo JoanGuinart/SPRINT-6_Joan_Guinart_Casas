@@ -5,8 +5,8 @@ export const Escena = (props) => {
 
   const num = props.num;
   const frases = props.frases.map((frase, index) => (
-    <p key={index} className={`${index === num ? "selected" : ""}`}>
-      {frase}
+    <p key={index} className={`${index === num ? "selected" : ``}`}>
+      {frase.txt}
     </p>
   ));
 
